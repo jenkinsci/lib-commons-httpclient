@@ -1,0 +1,17 @@
+<ivysettings>
+  <properties file="${ivy.settings.dir}/ivysettings.properties"/>
+  <settings defaultResolver="libraries" />
+  <caches defaultCacheDir="${ivy.settings.dir}/ivy-cache" />
+  <resolvers>
+    <filesystem name="projects">
+      <artifact pattern="${repository.dir}/lib/[artifact]-[revision].[ext]" />
+      <ivy pattern="${repository.dir}/lib/[module]-[revision].xml" />
+    </filesystem>
+    <ibiblio name="libraries" m2compatible="true" usepoms="false" />
+  </resolvers>
+  <modules>
+    <module organisation="commons-logging" name="commons-logging" resolver="projects"/>
+    <module organisation="commons-codec" name="commons-codec" resolver="projects"/>
+    <module organisation="junit" name="junit" resolver="projects"/>
+  </modules>
+</ivysettings>

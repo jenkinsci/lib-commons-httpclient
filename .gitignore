@@ -1,1 +1,4 @@
 build.properties
+lib
+ivy-cache
+out

@@ -40,3 +40,7 @@ httpclient.test.log=org.apache.commons.logging.impl.SimpleLog
 #httpclient.test.log=org.apache.commons.logging.impl.NoOpLog
 maven.username=yourASFid
 maven.repo.asf.privatekey=/home/myuser/.ssh/id_dsa
+
+# For Ivy
+env.IVY_HOME=/opt/tools/ivy
+repository.dir=/home/myuser/jenkins/commons-httpclient-3.1
