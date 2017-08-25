@@ -1,0 +1,8 @@
+<ivy-module version="1.0">
+  <info organisation="org.apache" module="dependee"/>
+  <dependencies>
+    <dependency org="commons-logging" name="commons-logging" rev="1.2"/>
+    <dependency org="commons-codec" name="commons-codec" rev="1.8"/>
+    <dependency org="junit" name="junit" rev="4.12"/>
+  </dependencies>
+</ivy-module>
