@@ -7,7 +7,7 @@
   <artifactId>commons-httpclient</artifactId>
   <gumpRepositoryId>jakarta-commons-httpclient</gumpRepositoryId>
   <inceptionYear>2001</inceptionYear>
-  <currentVersion>3.1</currentVersion>
+  <currentVersion>3.1-jenkins-1</currentVersion>
   <package>org.apache.commons.httpclient</package>
 
   <organization>
