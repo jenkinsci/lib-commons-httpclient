@@ -8,7 +8,7 @@
         <version>1.39</version>
     </parent>
 
-    <groupId>todo</groupId>
+    <groupId>commons-httpclient</groupId>
     <artifactId>commons-httpclient</artifactId>
     <version>3.1-jenkins-1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -17,6 +17,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.level>7</java.level>
     </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/envinject-lib.git</connection>
