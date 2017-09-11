@@ -180,7 +180,7 @@
   <target name="dist" depends="compile,doc"
           description="Create binary distribution">
     <mkdir dir="${dist.home}"/>
-    <copy file="LICENSE.txt" todir="${dist.home}"/> 
+    <copy file="src/main/resources/META-INF/LICENSE.txt" todir="${dist.home}"/>
     <copy file="build.xml" todir="${dist.home}"/>
     <copy file="build.properties.sample" todir="${dist.home}"/>
     <copy file="README.txt" todir="${dist.home}"/>
