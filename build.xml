@@ -21,8 +21,8 @@
 
   <property name="lib.dir" value="./lib"/>
 
-  <property name="commons-logging.jar" value="${lib.dir}/commons-logging.jar"/>
-  <property name="commons-codec.jar" value="${lib.dir}/commons-codec.jar"/>
+  <property name="commons-logging.jar" value="${lib.dir}/commons-logging-1.2.jar"/>
+  <property name="commons-codec.jar" value="${lib.dir}/commons-codec-1.8.jar"/>
 
 <!-- ========== Properties: Javadoc Properties    ========================= -->
 
@@ -55,9 +55,10 @@
 
   <!-- The base directory for unit test sources -->
   <property name="test.home"               value="src/test/java"/>
+  <property name="test.resources"          value="src/test/resources"/>
 
   <!-- The Junit test jarfile -->
-  <property name="junit.jar" value="${lib.dir}/junit.jar"/>
+  <property name="junit.jar" value="${lib.dir}/junit-4.12.jar"/>
 
   <!-- The commons-logging friendly logger class to use for tests -->
   <property name="httpclient.test.log" value="org.apache.commons.logging.impl.SimpleLog"/>
@@ -238,10 +239,10 @@
       <classpath refid="test.classpath"/>
     </javac>
     <copy todir="${build.home}/tests" filtering="on">
-      <fileset dir="${test.home}" includes="**/*.properties" />
+      <fileset dir="${test.resources}" includes="**/*.properties" />
     </copy>
     <copy todir="${build.home}/tests" filtering="off">
-      <fileset dir="${test.home}" includes="**/*.keystore" />
+      <fileset dir="${test.resources}" includes="**/*.keystore" />
     </copy>
   </target>
 
