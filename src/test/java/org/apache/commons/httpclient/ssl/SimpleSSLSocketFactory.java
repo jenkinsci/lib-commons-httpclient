@@ -60,7 +60,7 @@ public class SimpleSSLSocketFactory implements SimpleSocketFactory {
     private static SSLContext createSSLContext() {
         try {
             ClassLoader cl = SimpleSocketFactory.class.getClassLoader();
-            URL url = cl.getResource("src/main/resources/org/apache/commons/httpclient/ssl/simpleserver.keystore");
+            URL url = cl.getResource("org/apache/commons/httpclient/ssl/simpleserver.keystore");
             KeyStore keystore  = KeyStore.getInstance("jks");
             InputStream is = null;
             try {
@@ -80,7 +80,7 @@ public class SimpleSSLSocketFactory implements SimpleSocketFactory {
             // this is not the way a sane exception handling should be done
             // but for our simple HTTP testing framework this will suffice
             LOG.error(ex.getMessage(), ex);
-            throw new IllegalStateException(ex.getMessage());
+            throw new IllegalStateException(ex);
         }
     
     }
