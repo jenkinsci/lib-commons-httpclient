@@ -54,7 +54,7 @@
 <!-- ========== Properties: Test Configuration ============================ -->
 
   <!-- The base directory for unit test sources -->
-  <property name="test.home"               value="src/test"/>
+  <property name="test.home"               value="src/test/java"/>
 
   <!-- The Junit test jarfile -->
   <property name="junit.jar" value="${lib.dir}/junit.jar"/>
@@ -212,7 +212,7 @@
 
   <target name="compile" depends="static"
           description="Compile shareable components">
-    <javac srcdir      ="${source.home}/java"
+    <javac srcdir      ="${source.home}/main/java"
            destdir     ="${build.home}/classes"
            debug       ="${compile.debug}"
            deprecation ="${compile.deprecation}"
@@ -274,7 +274,7 @@
     <mkdir dir="${dist.home}"/>
     <mkdir dir="${dist.home}/docs"/>
     <mkdir dir="${dist.home}/docs/api"/>
-    <javadoc sourcepath   ="${source.home}/java"
+    <javadoc sourcepath   ="${source.home}/main/java"
              destdir      ="${dist.home}/docs/api"
              packagenames ="org.apache.commons.*"
              author       ="true"
