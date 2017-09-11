@@ -3,3 +3,4 @@ lib
 ivy-cache
 out
 dist
+commons-httpclient.iml
