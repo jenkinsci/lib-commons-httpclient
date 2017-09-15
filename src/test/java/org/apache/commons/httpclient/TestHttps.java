@@ -37,6 +37,11 @@ import junit.framework.TestSuite;
 
 import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.jvnet.hudson.test.Issue;
+
+import javax.net.ssl.SSLException;
+import java.net.InetAddress;
+import java.net.URL;
 
 /**
  * Simple tests for HTTPS support in HttpClient.
@@ -50,6 +55,7 @@ import org.apache.commons.httpclient.methods.GetMethod;
  *
  * @author Rodney Waldhoff
  * @author Ortwin Glueck
+ * @author Alberto Fernández
  * @version $Id: TestHttps.java 480424 2006-11-29 05:56:49Z bayard $
  */
 public class TestHttps extends TestCase {
@@ -57,6 +63,7 @@ public class TestHttps extends TestCase {
     // ---------------------------------------------------------------- Members
     private String _urlWithPort = null;
     private String _urlWithoutPort = null;
+    private String _urlWithIp = null;
     private final String PROXY_HOST = System.getProperty("httpclient.test.proxyHost");
     private final String PROXY_PORT = System.getProperty("httpclient.test.proxyPort");
     private final String PROXY_USER = System.getProperty("httpclient.test.proxyUser");
@@ -81,6 +88,7 @@ public class TestHttps extends TestCase {
     public void setUp() throws Exception {
         _urlWithPort = "https://www.verisign.com:443/";
         _urlWithoutPort = "https://www.verisign.com/";
+        _urlWithIp = "https://"+ InetAddress.getByName(new URL(_urlWithoutPort).getHost()).getHostAddress();
     }
 
     public void testHttpsGet() {
@@ -138,6 +146,33 @@ public class TestHttps extends TestCase {
         } catch (Throwable t) {
             t.printStackTrace();
             fail("Exception thrown while retrieving data : " + t.toString());
+        }
+    }
+
+    /**
+     * Direct unit test for host versification in SSL.
+     * The test has been proposed as a patch in <a href="https://issues.apache.org/jira/browse/HTTPCLIENT-1265">HTTPCLIENT-1265</a>
+     */
+    public void testHostNameValidation() {
+        HttpClient client = new HttpClient();
+        if (PROXY_HOST != null) {
+            if (PROXY_USER != null) {
+                HttpState state = client.getState();
+                state.setProxyCredentials(AuthScope.ANY, new UsernamePasswordCredentials(
+                        PROXY_USER, PROXY_PASS));
+            }
+            client.getHostConfiguration().setProxy(PROXY_HOST, Integer.parseInt(PROXY_PORT));
+        }
+        GetMethod method = new GetMethod(_urlWithIp);
+
+        try {
+            client.executeMethod(method);
+            fail("Invalid hostname not detected");
+        } catch (SSLException e) {
+            assertTrue("Connection with a invalid server certificate rejected", true);
+        } catch (Throwable t) {
+            t.printStackTrace();
+            fail("Unexpected exception" + t.getMessage());
         }
     }
 }
