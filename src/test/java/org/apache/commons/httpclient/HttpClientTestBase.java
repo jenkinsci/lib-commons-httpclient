@@ -53,7 +53,7 @@ import org.apache.commons.httpclient.ssl.SimpleSSLTestProtocolSocketFactory;
  * 
  * @version $Id: HttpClientTestBase.java 480424 2006-11-29 05:56:49Z bayard $
  */
-public class HttpClientTestBase extends TestCase {
+public abstract class HttpClientTestBase extends TestCase {
 
     protected HttpClient client = null;
     protected SimpleHttpServer server = null;

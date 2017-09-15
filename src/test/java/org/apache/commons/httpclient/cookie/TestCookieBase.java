@@ -40,7 +40,7 @@ import org.apache.commons.httpclient.Header;
  * @author <a href="mailto:oleg@ural.ru">Oleg Kalnichevski</a>
  * @version $Revision: 480424 $
  */
-public class TestCookieBase extends TestCase {
+public abstract class TestCookieBase extends TestCase {
 
     // ------------------------------------------------------------ Constructor
 
