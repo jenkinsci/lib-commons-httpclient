@@ -153,6 +153,7 @@ public class TestHttps extends TestCase {
      * Direct unit test for host versification in SSL.
      * The test has been proposed as a patch in <a href="https://issues.apache.org/jira/browse/HTTPCLIENT-1265">HTTPCLIENT-1265</a>
      */
+    @Issue("SECURITY-555")
     public void testHostNameValidation() {
         HttpClient client = new HttpClient();
         if (PROXY_HOST != null) {
