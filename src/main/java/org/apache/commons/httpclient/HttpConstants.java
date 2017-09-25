@@ -44,6 +44,7 @@ import org.apache.commons.logging.LogFactory;
  * 
  * @deprecated use EncodingUtil class
  */
+@Deprecated
 public class HttpConstants {
 
     /** Character set used to encode HTTP protocol elements */

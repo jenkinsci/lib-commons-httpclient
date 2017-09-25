@@ -76,6 +76,7 @@ import org.apache.commons.logging.LogFactory;
  * @deprecated Use {@link org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity}
  * in conjunction with {@link org.apache.commons.httpclient.methods.PostMethod} instead.
  */
+@Deprecated
 public class MultipartPostMethod extends ExpectContinueMethod {
 
     /** The Content-Type for multipart/form-data. */

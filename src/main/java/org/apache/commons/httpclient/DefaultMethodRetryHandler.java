@@ -39,6 +39,7 @@ package org.apache.commons.httpclient;
  * 
  * @deprecated use {@link org.apache.commons.httpclient.DefaultHttpMethodRetryHandler}
  */
+@Deprecated
 public class DefaultMethodRetryHandler implements MethodRetryHandler {
 
     /** the number of times a method will be retried */

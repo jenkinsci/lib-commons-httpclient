@@ -44,7 +44,14 @@ import org.apache.commons.logging.LogFactory;
  * @author <a href="mailto:oleg@ural.ru">Oleg Kalnichevski</a>
  * @since 2.0
  * @version $Revision: 483949 $ $Date: 2006-12-08 12:34:50 +0100 (Fri, 08 Dec 2006) $
+ * @deprecated Jakarta Commons HttpClient 3.x is deprecated in the Jenkins project.
+ *  It is not recommended to use it in any new code.
+ *  Instead, use HTTP client API plugins as a dependency in your code.
+ *  E.g. <a href="https://plugins.jenkins.io/apache-httpcomponents-client-4-api">
+ *      Apache HttpComponents Client API 4.x Plugin</a> or
+ *  <a href="https://plugins.jenkins.io/async-http-client">Async HTTP Client Plugin</a>.
  */
+@Deprecated
 public class ConnectMethod extends HttpMethodBase {
     
     /** the name of this method */

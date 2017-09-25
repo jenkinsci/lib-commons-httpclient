@@ -70,6 +70,7 @@ import org.apache.commons.logging.LogFactory;
  * 
  * @deprecated no longer used
  */
+@Deprecated
 public final class HttpAuthenticator {
 
     /** Log object for this class. */
