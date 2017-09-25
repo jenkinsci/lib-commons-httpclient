@@ -37,7 +37,14 @@ package org.apache.commons.httpclient;
  * @author <a href="mailto:mbowler@GargoyleSoftware.com">Mike Bowler</a>
  * @author <a href="mailto:oleg@ural.ru">Oleg Kalnichevski</a>
  * @version $Revision: 480424 $ $Date: 2006-11-29 06:56:49 +0100 (Wed, 29 Nov 2006) $
+ * @deprecated Jakarta Commons HttpClient 3.x is deprecated in the Jenkins project.
+ *  It is not recommended to use it in any new code.
+ *  Instead, use HTTP client API plugins as a dependency in your code.
+ *  E.g. <a href="https://plugins.jenkins.io/apache-httpcomponents-client-4-api">
+ *      Apache HttpComponents Client API 4.x Plugin</a> or
+ *  <a href="https://plugins.jenkins.io/async-http-client">Async HTTP Client Plugin</a>.
  */
+@Deprecated
 public class Header extends NameValuePair {
 
     // ----------------------------------------------------------- Constructors

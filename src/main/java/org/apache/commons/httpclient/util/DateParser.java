@@ -49,6 +49,7 @@ import java.util.TimeZone;
  * 
  * @deprecated Use {@link org.apache.commons.httpclient.util.DateUtil}
  */
+@Deprecated
 public class DateParser {
 
     /**

@@ -38,14 +38,14 @@ package org.apache.commons.httpclient.auth;
  * @since 3.0
  * @deprecated Jakarta Commons HttpClient 3.x is deprecated in the Jenkins project.
  *             It is not recommended to use it in any new code.
- *             Instead of that, use HTTP client API plugins as a dependency in your code.
+ *             Instead, use HTTP client API plugins as a dependency in your code.
  *             E.g. <a href="https://plugins.jenkins.io/apache-httpcomponents-client-4-api">Apache HttpComponents Client API 4.x Plugin</a> or
  *             <a href="https://plugins.jenkins.io/async-http-client">Async HTTP Client Plugin</a>.
  */
-//TODO: Restrict all other classes
 //TODO: Also add @Restricted once Jenkins core is able to build without the detached component.
 // It may require Accmod patches && may break PCT tests, but probably it worth it to highlight the
 // deprecated component usage in plugins.
+@Deprecated
 public class AuthChallengeException extends AuthenticationException {
 
     /**

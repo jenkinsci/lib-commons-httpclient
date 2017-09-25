@@ -39,6 +39,7 @@ package org.apache.commons.httpclient.auth;
  *
  * @author <a href="mailto:oleg@ural.ru">Oleg Kalnichevski</a>
  */
+@Deprecated
 public abstract class AuthSchemeBase implements AuthScheme {
 
     /**

@@ -37,6 +37,7 @@ package org.apache.commons.httpclient.auth;
  * 
  * @deprecated no longer used
  */
+@Deprecated
 public class HttpAuthRealm extends AuthScope {
     
     /** Creates a new HttpAuthRealm for the given <tt>domain</tt> and 

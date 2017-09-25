@@ -35,8 +35,16 @@ package org.apache.commons.httpclient;
  *
  * @author <a href="mailto:jericho at apache.org">Sung-Gu</a>
  * @author <a href="mailto:oleg@ural.ru">Oleg Kalnichevski</a>
- * @version $Revision: 480424 $ $Date: 2002/03/14 15:14:01 
+ * @version $Revision: 480424 $ $Date: 2002/03/14 15:14:01
+ *
+ * @deprecated Jakarta Commons HttpClient 3.x is deprecated in the Jenkins project.
+ *  It is not recommended to use it in any new code.
+ *  Instead, use HTTP client API plugins as a dependency in your code.
+ *  E.g. <a href="https://plugins.jenkins.io/apache-httpcomponents-client-4-api">
+ *      Apache HttpComponents Client API 4.x Plugin</a> or
+ *  <a href="https://plugins.jenkins.io/async-http-client">Async HTTP Client Plugin</a>.
  */
+@Deprecated
 public class URIException extends HttpException {
 
     // ----------------------------------------------------------- constructors

@@ -60,6 +60,7 @@ import org.apache.commons.logging.LogFactory;
  * 
  * @version $Revision: 531354 $ $Date: 2007-04-23 08:53:20 +0200 (Mon, 23 Apr 2007) $
  */
+@Deprecated
 public class Cookie extends NameValuePair implements Serializable, Comparator {
 
     // ----------------------------------------------------------- Constructors
