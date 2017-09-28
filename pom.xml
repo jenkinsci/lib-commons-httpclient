@@ -10,7 +10,7 @@
 
     <groupId>commons-httpclient</groupId>
     <artifactId>commons-httpclient</artifactId>
-    <version>3.1-jenkins-1</version>
+    <version>3.1-jenkins-2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>HttpCommons Client library</name>
     <properties>
@@ -28,7 +28,7 @@
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/envinject-lib.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/envinject-lib.git</developerConnection>
-        <tag>commons-httpclient-3.1-jenkins-1</tag>
+        <tag>HEAD</tag>
       </scm>
 
     <dependencies>
