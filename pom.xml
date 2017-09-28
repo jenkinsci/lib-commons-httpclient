@@ -10,7 +10,7 @@
 
     <groupId>commons-httpclient</groupId>
     <artifactId>commons-httpclient</artifactId>
-    <version>3.1-jenkins-1-SNAPSHOT</version>
+    <version>3.1-jenkins-1</version>
     <packaging>jar</packaging>
     <name>HttpCommons Client library</name>
     <properties>
@@ -28,13 +28,13 @@
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/envinject-lib.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/envinject-lib.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>commons-httpclient-3.1-jenkins-1</tag>
       </scm>
 
     <dependencies>
-        <!--<dependency org="commons-logging" name="commons-logging" rev="1.2"/>
-        <dependency org="commons-codec" name="commons-codec" rev="1.8"/>
-        <dependency org="junit" name="junit" rev="4.12"/> -->
+        <!--<dependency org="commons-logging" name="commons-logging" rev="1.2" />
+        <dependency org="commons-codec" name="commons-codec" rev="1.8" />
+        <dependency org="junit" name="junit" rev="4.12" /> -->
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
