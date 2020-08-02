@@ -26,8 +26,8 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/envinject-lib.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/envinject-lib.git</developerConnection>
+        <connection>scm:git:git://github.com/jenkinsci/lib-commons-httpclient.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/lib-commons-httpclient.git</developerConnection>
         <tag>HEAD</tag>
       </scm>
 
