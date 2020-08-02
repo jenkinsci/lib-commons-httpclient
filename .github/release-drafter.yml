@@ -1,0 +1,4 @@
+_extends: .github
+# TODO: Fix after the 1.0 release
+version-template: $MAJOR.$MINOR-jenkins-$PATCH
+tag-template: commons-httpclient-$NEXT_PATCH_VERSION
