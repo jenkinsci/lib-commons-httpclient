@@ -4,3 +4,4 @@ ivy-cache
 out
 dist
 commons-httpclient.iml
+target/
