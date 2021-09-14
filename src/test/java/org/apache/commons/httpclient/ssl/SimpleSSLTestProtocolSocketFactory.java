@@ -72,7 +72,7 @@ public class SimpleSSLTestProtocolSocketFactory implements SecureProtocolSocketF
                     TrustManagerFactory.getDefaultAlgorithm());
             tmfactory.init(keystore);
             TrustManager[] trustmanagers = tmfactory.getTrustManagers(); 
-            SSLContext sslcontext = SSLContext.getInstance("TLS");
+            SSLContext sslcontext = SSLContext.getInstance("TLSv1.2");
             sslcontext.init(null, trustmanagers, null);
             return sslcontext;
         } catch (Exception ex) {
