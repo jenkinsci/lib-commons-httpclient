@@ -36,6 +36,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -109,7 +110,7 @@ public class TestPartsNoHost extends TestCase {
      * written to.
      */
     private File createTempTestFile() throws IOException {
-        File file = File.createTempFile("FilePartTest", ".txt");
+        File file = Files.createTempFile("FilePartTest", ".txt").toFile();
         PrintWriter out = new PrintWriter(new FileWriter(file));
         out.println(PART_DATA);
         out.flush();
